@@ -27,7 +27,7 @@
     [(? real? n) (display n)]
     [(? symbol? s) (display s)]
     [(list (list 'lambda (list (? symbol? args) ...) body) vals ...) (display-app args body vals)]
-    [(list 'lambda (list (? symbol? args) ...) body) (display-lam args body)]
+    [(list 'λ (list (? symbol? args) ...) body) (display-lam args body)]
     [(list '+ a b) (translate a) (display " + ")(translate b)]
     [(list '* a b) (translate a) (display " * ")(translate b)]
     [(list 'ifleq0 a b c) (translate b)(display " if ")
